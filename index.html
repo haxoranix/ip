@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hostcode Lab Internship Application</title>
+  <meta name="description" content="Apply for an internship at Hostcode Lab." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-panel">
+      <div>
+        <div class="brand-row">
+          <div class="brand-mark">H</div>
+          <div>
+            <p class="eyebrow">Hostcode Lab</p>
+            <h1>Internship Application Portal</h1>
+          </div>
+        </div>
+
+        <p class="hero-copy">
+          Start your career with hands-on engineering, design, marketing, and business experience.
+          Complete the application and our team will review your profile.
+        </p>
+      </div>
+
+      <div>
+        <div class="stats-grid">
+          <div>
+            <strong>Remote</strong>
+            <span>Flexible internship options</span>
+          </div>
+          <div>
+            <strong>Live Projects</strong>
+            <span>Work on real product tasks</span>
+          </div>
+          <div>
+            <strong>Mentorship</strong>
+            <span>Guidance from the Hostcode Lab team</span>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <p class="timeline-title">Application flow</p>
+          <ol>
+            <li>Submit your application</li>
+            <li>Profile review</li>
+            <li>Interview or task round</li>
+            <li>Final onboarding</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-header">
+        <div>
+          <p class="eyebrow">Apply now</p>
+          <h2>Tell us about yourself</h2>
+        </div>
+        <span class="badge">Secure submission</span>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-bar">
+          <span id="progressFill"></span>
+        </div>
+        <p id="progressText">Step 1 of 4</p>
+      </div>
+
+      <form id="applicationForm" novalidate>
+        <fieldset class="form-step active" data-step="1">
+          <legend>Personal information</legend>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Full name</span>
+              <input type="text" name="fullName" autocomplete="name" required placeholder="Your full name" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Phone number</span>
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+91 98765 43210" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>City</span>
+              <input type="text" name="city" autocomplete="address-level2" required placeholder="Your city" />
+              <small class="error"></small>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-step" data-step="2">
+          <legend>Education details</legend>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>College or university</span>
+              <input type="text" name="college" required placeholder="Institution name" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Degree or course</span>
+              <input type="text" name="degree" required placeholder="B.Tech, BCA, MCA, MBA..." />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Graduation year</span>
+              <select name="graduationYear" required>
+                <option value="">Select year</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>Already graduated</option>
+              </select>
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Current experience level</span>
+              <select name="experienceLevel" required>
+                <option value="">Select level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+                <option>Professional experience</option>
+              </select>
+              <small class="error"></small>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-step" data-step="3">
+          <legend>Internship preference</legend>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Preferred internship track</span>
+              <select name="track" required>
+                <option value="">Choose a track</option>
+                <option>Web Development</option>
+                <option>Frontend Development</option>
+                <option>Backend Development</option>
+                <option>Full Stack Development</option>
+                <option>UI/UX Design</option>
+                <option>Digital Marketing</option>
+                <option>Content Writing</option>
+                <option>Business Development</option>
+              </select>
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Availability</span>
+              <select name="availability" required>
+                <option value="">Select availability</option>
+                <option>Immediate</option>
+                <option>Within 1 week</option>
+                <option>Within 2 weeks</option>
+                <option>Within 1 month</option>
+              </select>
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Internship type</span>
+              <select name="internshipType" required>
+                <option value="">Select type</option>
+                <option>Remote</option>
+                <option>On-site</option>
+                <option>Hybrid</option>
+              </select>
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>How did you hear about us?</span>
+              <input type="text" name="source" placeholder="LinkedIn, Instagram, referral..." />
+              <small class="error"></small>
+            </label>
+          </div>
+
+          <label class="field full">
+            <span>Skills</span>
+            <textarea name="skills" required rows="4" placeholder="Example: HTML, CSS, JavaScript, React, Figma, SEO..."></textarea>
+            <small class="error"></small>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-step" data-step="4">
+          <legend>Portfolio and final details</legend>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>LinkedIn URL</span>
+              <input type="url" name="linkedin" placeholder="https://linkedin.com/in/your-profile" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>GitHub URL</span>
+              <input type="url" name="github" placeholder="https://github.com/username" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Portfolio URL</span>
+              <input type="url" name="portfolio" placeholder="https://yourportfolio.com" />
+              <small class="error"></small>
+            </label>
+
+            <label class="field">
+              <span>Resume link</span>
+              <input type="url" name="resumeUrl" required placeholder="Google Drive, Dropbox, or portfolio resume link" />
+              <small class="error"></small>
+            </label>
+          </div>
+
+          <label class="field full">
+            <span>Why should Hostcode Lab select you?</span>
+            <textarea name="motivation" required rows="5" placeholder="Write a short note about your goals, projects, and interest in this internship."></textarea>
+            <small class="error"></small>
+          </label>
+
+          <label class="check-field">
+            <input type="checkbox" name="consent" required />
+            <span>I confirm that the information provided is accurate and I agree to be contacted by Hostcode Lab about this application.</span>
+          </label>
+          <small class="error consent-error" id="consentError"></small>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="button" class="btn ghost" id="prevBtn">Back</button>
+          <button type="button" class="btn primary" id="nextBtn">Continue</button>
+          <button type="submit" class="btn primary hidden" id="submitBtn">
+            <span class="btn-label">Submit application</span>
+            <span class="loader"></span>
+          </button>
+        </div>
+
+        <p class="form-note">
+          Tip: Make sure your resume link is public or accessible to Hostcode Lab.
+        </p>
+      </form>
+
+      <div class="success-card hidden" id="successCard">
+        <div class="success-icon">✓</div>
+        <h2>Application submitted</h2>
+        <p>
+          Thank you for applying to Hostcode Lab. Our team will review your details and contact you if your profile matches the internship requirements.
+        </p>
+        <button class="btn ghost" id="newApplicationBtn">Submit another application</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
